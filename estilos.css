@@ -1,0 +1,186 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos Menu social*/
+.container-fluid{
+   display: flex;
+   max-width: 100rem;
+   background-color: #40957f;
+   height: 8rem;   
+}
+
+.name{
+    font-family: 'Dancing Script', cursive;
+ 
+}
+
+.nav-sociales{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  
+}
+
+.nav-sociales > a{
+ margin-right: 2rem;
+ font-size: 1.3rem;
+ text-decoration: none;
+ padding: 1rem;
+ color: #fcfcfc;
+}
+
+.nav-sociales > a:hover{
+    color: #11644d;
+}
+
+.navegation-search-input{
+    width: 15rem;
+    padding: 1rem 2rem;    /* Espaciado de los lados*/
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1rem;        /* Tamaño de la fuente*/
+    color: #e1a87e;
+    letter-spacing: 0.1rem;
+    outline: none;
+    border: 0.1rem solid #11644d;;
+    border-radius: 12rem;
+    transition: background-color 0.4seg;
+    height: 1.5rem;
+}
+
+
+.navigation-search-btn {
+    border: none;
+    background-color: transparent;
+    color:  #11644d;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 0.5rem;        /* mueve la lupa a dentro del buscador hacia arriba*/
+    right: 49.5rem;   /* mueve la lupa a dentro del buscador a la izquierda*/
+    cursor: pointer;
+}
+
+
+
+/* Termina estilos menu social */
+
+/* Header  */
+.content-header {
+   position: relative;
+   display: block;
+
+}
+
+.img-web{
+    max-width: 100rem;  /* hace que la imagen ocupe toda la pantalla  */
+    width: 100%;        /* hace que la imagen ocupe toda la pantalla  */
+
+}
+
+
+nav{
+    position: absolute;
+    top: 2rem;
+    margin-left: 2rem;
+}
+
+nav a{
+    margin-left: 1rem;
+    text-align: center;
+    text-decoration: none;
+    border: 5rem;
+    border-radius: 30rem;
+    font-weight: 600;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    
+}
+
+nav a:hover{
+    background-color: #40957f;;
+    color: black;
+    text-decoration: underline;
+}
+
+ /* Fin de Header  */
+
+ /* Sobre mi */
+ .sobre-mi{
+    background-color: #151515;
+    padding-bottom: 7rem;
+    text-align: center;
+    color: #fff;
+    font: 400;
+    font-size: 1rem;
+    height: 30rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+
+}
+
+.bordered-title{
+    font-size: 2rem;
+    font-weight: bold;
+    display: inline-block;
+    color: #fff;
+    text-shadow: -2px -2px 0 #3498db; 
+    
+    /* 2px 2px 0 #3498db, = Sombra hacia la derecha */
+    /*  -2px -2px 0 #3498db, = Sombra hacia la izquierda */
+    /*  2px -2px 0 #3498db,  = Sombra hacia la parte superior */
+    /*  -2px 2px 0 #3498db; = Sombra hacia la parte inferior */
+                                            
+}
+
+.small-underline{       /* los estilos generan la linea no las clases */
+    width: 9rem;    /*Esto crea lo ancho de la linea */
+    height: 0.1rem;  /*Esto crea lo alto de la linea */
+    margin: 0 auto 1rem auto;
+    background: #4d4d4d;
+}
+
+.big-underline{
+    width: 20rem;
+    height: 0.1rem;
+    margin: 0 auto 1rem auto;
+    background: #e1a87e;
+}
+
+p{
+    padding: 3rem 2rem;
+}
+
+
+.habilidades{
+    background-color: #151515;
+    padding-bottom: 7rem;
+    text-align: center;
+    color: #fff;
+    font: 400;
+    font-size: 1rem;
+    height: 30rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+  
+}
+/* En esta clase se aplica el estilo a el texto sin necesidad de indicarlo con <p> por que esta dentro de una
+section asi que es heredados con los elementos que hay dentro de section */
+.educacion{
+    background-color: #151515;
+    padding-bottom: 7rem;
+    text-align: center;
+    color: #fff;
+    font: 400;
+    font-size: 1rem;
+    height: 30rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+}
+
+
+
+
+ /* cierra sobre mi */
