@@ -9,101 +9,48 @@
 .container-fluid{
    display: flex;
    max-width: 100rem;
-   background-color: #40957f;
-   height: 8rem;   
+   background-color: #064254;
+   height: 5rem;  
+   justify-content: center;
+   align-items: center; 
 }
 
-.name{
-    font-family: 'Dancing Script', cursive;
- 
-}
-
-.nav-sociales{
+.navigation-list{
   display: flex;
-  justify-content: start;
-  align-items: center;
-  
+  gap: 2rem;  
+  list-style: none;  
 }
 
-.nav-sociales > a{
- margin-right: 2rem;
- font-size: 1.3rem;
- text-decoration: none;
- padding: 1rem;
- color: #fcfcfc;
+.navigation-list li a{
+    color: #ffffff;
+    text-decoration: none;
 }
-
-.nav-sociales > a:hover{
-    color: #11644d;
-}
-
-.navegation-search-input{
-    width: 15rem;
-    padding: 1rem 2rem;    /* Espaciado de los lados*/
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 1rem;        /* Tamaño de la fuente*/
-    color: #e1a87e;
-    letter-spacing: 0.1rem;
-    outline: none;
-    border: 0.1rem solid #11644d;;
-    border-radius: 12rem;
-    transition: background-color 0.4seg;
-    height: 1.5rem;
-}
-
-
-.navigation-search-btn {
-    border: none;
-    background-color: transparent;
-    color:  #11644d;
-    font-size: 1.5rem;
-    position: absolute;
-    top: 0.5rem;        /* mueve la lupa a dentro del buscador hacia arriba*/
-    right: 49.5rem;   /* mueve la lupa a dentro del buscador a la izquierda*/
-    cursor: pointer;
-}
-
-
-
 /* Termina estilos menu social */
 
-/* Header  */
-.content-header {
-   position: relative;
-   display: block;
 
+/* Header  */
+.imagen-container{       /* contenedor padre */
+  position: relative;  /*sirve de referencia para que sus hijos con position: absolute se coloquen encima de este conte*/
+  display: flex;   
 }
 
 .img-web{
     max-width: 100rem;  /* hace que la imagen ocupe toda la pantalla  */
     width: 100%;        /* hace que la imagen ocupe toda la pantalla  */
+    display: block;       /* coloca en bloque el contenedor aunque ya lo es por defecto  */
+}
 
+.name{
+    position: absolute;  /* esto posiciona el texto sobre la imagen, mediante la referencia de position: relative*/
+    margin-left: 5rem;
+    top: 8rem;
+    font-family: 'Dancing Script', cursive;
+    color: #ffffff;
+    font-size: 5rem;
 }
 
 
-nav{
-    position: absolute;
-    top: 2rem;
-    margin-left: 2rem;
-}
 
-nav a{
-    margin-left: 1rem;
-    text-align: center;
-    text-decoration: none;
-    border: 5rem;
-    border-radius: 30rem;
-    font-weight: 600;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    
-}
-
-nav a:hover{
-    background-color: #40957f;;
-    color: black;
-    text-decoration: underline;
-}
 
  /* Fin de Header  */
 

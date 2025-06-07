@@ -14,36 +14,21 @@
 <body>
     
 <!-- Menu Social -->
-<div class="container-fluid">
-    <div id="home" class="nav-sociales">
-        <a href="" class="fab fa-facebook-f"></a>
-        <a href="" class="fab fa-twitter"></a>
-        <a href="" class="fab fa-instagram"></a>
-        <a href="" class="fab fa-youtube"></a>
-    </div>
-
-    <form class="navegation-search">
-        <input type="text" class="navegation-search-input" placeholder="Buscar...">
-                <button class="navigation-search-btn">
-                    <i class="fas fa-search"></i>
-                </button>
-    </form>
-
-        <h1 class="name">José Guadalupe Diaz Silvas</h1>
-    
+<div class="container-fluid">   <!-- Contenedor abuelo-->
+  <ul class="navigation-list">  <!-- Contenedor Padre / se aplica el display: flex-->
+    <li><a href="#sobre-mi">Sobre mí</a></li>   <!-- hijos de navigation-list-->
+    <li><a href="#habilidades">Habilidades</a></li>
+    <li><a href="#educacion">Educación y Certificaciones</a></li>
+  </ul>
 </div>
 
 <!-- Header -->
 <header>
-  <div class="content-header">      <!-- Contenedor Padre / se aplica el display: flex-->
-        <img src="img/img2.png" alt="" class="img-web">
-        <nav> 
-            <ul class="navigation-list">  
-            <li><a href="#sobre-mi">Sobre mí</a></li>  
-            <li><a href="#habilidades">Habilidades</a></li> 
-            <li><a href="#educacion">Educacion y Certificaciones</a></li> 
-        </ul> 
-        </nav>  
+  <div class="content-header">     <!-- Contenedor abuelo-->
+    <div class="imagen-container">   <!-- Contenedor Padre / se aplica el display: flex-->
+          <img src="img/img2.png" alt="" class="img-web"> 
+                <h1 class="name">José Guadalupe Diaz Silvas</h1>
+    </div>
     </div>
 </header>
 <!-- Fin de Header -->
