@@ -17,13 +17,14 @@
 
 .navigation-list{
   display: flex;
-  gap: 2rem;  
+  gap: 2rem;         /* genera espaciado */
   list-style: none;  
 }
 
 .navigation-list li a{
     color: #ffffff;
     text-decoration: none;
+    font-family: 'Outfit', sans-serif;
 }
 /* Termina estilos menu social */
 
@@ -31,8 +32,10 @@
 /* Header  */
 .imagen-container{       /* contenedor padre */
   position: relative;  /*sirve de referencia para que sus hijos con position: absolute se coloquen encima de este conte*/
-  display: flex;   
+  display: flex; 
+  justify-content: end;
 }
+
 
 .img-web{
     max-width: 100rem;  /* hace que la imagen ocupe toda la pantalla  */
@@ -43,13 +46,22 @@
 .name{
     position: absolute;  /* esto posiciona el texto sobre la imagen, mediante la referencia de position: relative*/
     margin-left: 5rem;
+    padding-right: 28rem;
     top: 8rem;
     font-family: 'Dancing Script', cursive;
-    color: #ffffff;
+    color: #ffffff;  
     font-size: 5rem;
 }
 
-
+.img-person{
+    position: absolute;
+    width: 12rem;
+    height: 12rem;
+    margin-top: 5rem;
+    margin-right: 5rem;
+    border-radius: 10rem;
+    border: 0.2324rem solid#151515;
+}
 
 
  /* Fin de Header  */
@@ -126,8 +138,109 @@ section asi que es heredados con los elementos que hay dentro de section */
     margin-top: 1rem;
     padding-top: 1rem;
 }
-
-
-
-
  /* cierra sobre mi */
+
+ /* estilos formularios */
+ 
+ body .formulario{    /* esta parte del selector centra todo el formulario */
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;  /* Centra horizontalmente */
+    align-items: center;      /* Centra verticalmente */
+    background-color: #1C2F43;
+    }
+
+   
+
+ .container{
+    width: 25rem;
+    background-color: #307EAF;
+    border: 0.2324rem solid #3A4363;
+    padding: 2rem;
+    border-radius: 1rem;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 400;
+    box-shadow: 0 0 5px #3A4363;
+
+ }
+
+    .container:hover{  
+    box-shadow: 0 0 10px #3A4363;
+    animation: glowBorder 2s infinite alternate;
+    }
+    @keyframes glowBorder {
+  from {
+    box-shadow: 0 0 10px #3A4363, 0 0 20px #3A4363;
+  }
+  to {
+    box-shadow: 0 0 20px #41a1e4, 0 0 40px #41a1e4;
+  }
+}
+
+ .container div{
+    margin-bottom: 2rem;   /* espaciado en cada campo */
+ }
+
+
+ .seccion-1{
+    display: flex;
+    flex-direction: column;
+ }
+
+ .seccion-2{
+    display: flex;
+    flex-direction: column;   /* Coloca el campo en columna */
+ }
+
+ .seccion-3{
+    display: flex;
+    flex-direction: column;
+ }
+
+  .seccion-4{
+    display: flex;
+    flex-direction: column;
+ }
+
+ .seccion-5{
+      display: flex;
+      gap: 9rem; 
+      align-items: center;
+ }
+
+ .mi-boton{
+    width: 4rem;
+    height: 2rem;
+    cursor: pointer;
+ }
+
+ button:hover{
+    color: white;
+    background-color: #064254;
+   
+}
+ 
+
+.btn{
+  padding: 0.4rem 1.5rem;
+  display: inline;
+  background-color: white;
+  text-decoration: none;  
+  color: #151515;
+
+
+}
+
+
+/* ancho de los campos */
+ input{
+    max-width: 20rem;
+    height: 2rem;
+ }
+
+ textarea{
+    max-width: 20rem;
+    height: 10rem;
+ }
+

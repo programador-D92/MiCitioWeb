@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="estilos.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="formulario"> <!-- Contenedor abuelo-->
+    <div class="container"> <!-- Contenedor padre-->
+        <div class="title">Registro</div>   <!-- Contenedor hijo-->
+
+            <div class="seccion-1">   <!-- Contenedor nieto-->
+                <label for="name">Nombre:</label> <!-- Contenedor visnieto-->
+                <input type="text" placeholder="ingrese su nombre">  
+            </div>
+
+             <div class="seccion-2">   <!-- Contenedor nieto-->
+                <label for="email">Email:</label> <!-- Contenedor visnieto-->
+                <input type="email" placeholder="ingrese su email">  
+            </div>
+
+             <div class="seccion-3">   <!-- Contenedor nieto-->
+                  <label for="celphone">Numero telefonico:</label> <!-- Contenedor visnieto-->
+                <input type="number" placeholder="ingrese su numero telefonico">  
+            </div>
+
+
+            <div class="seccion-4">   <!-- Contenedor nieto-->
+                  <label for="message">Mensaje:</label> <!-- Contenedor visnieto-->
+              <textarea name="mensaje" placeholder="Deja tu mensaje aquí..."></textarea>
+            </div>
+
+             <div class="seccion-5">
+                <button type="submit" class="mi-boton">Enviar</button>
+
+         
+               <a href="index.html" class="btn">Regresar</a>
+             </div>
+        </div>
+    </div>
+    
+<!-- Inicio de efectos de SweetAlert2 -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const boton = document.querySelector(".btn");
+
+      boton.addEventListener("click", function (event) {
+        event.preventDefault(); // Evita la redirección automática
+
+        Swal.fire({
+          title: "¿Estás seguro de querer ir a la pagina principal?",
+          text: "Serás redirigido a la página principal.",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "Sí, ir",
+          cancelButtonText: "Cancelar"
+        }).then((result) => {
+          if (result.isConfirmed) {
+            // Redirecciona si el usuario confirma
+            window.location.href = boton.href;
+          }
+        });
+      });
+    });
+  </script>
+<!-- Fin de efectos de SweetAlert2 -->
+
+
+</body>
+</html>
