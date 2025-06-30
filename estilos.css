@@ -1,4 +1,14 @@
 
+/* Variables globales root */
+:root{
+  --color-general: #041522;
+  --color-contenedores: #151515;
+}
+
+
+body{
+  background-color: var(--color-general);
+}
 *{
     margin: 0;
     padding: 0;
@@ -36,6 +46,10 @@
   justify-content: end;
 }
 
+.content-header{
+  margin-bottom: 3rem;
+}
+
 
 .img-web{
     max-width: 100rem;  /* hace que la imagen ocupe toda la pantalla  */
@@ -54,7 +68,7 @@
 }
 
 .img-person{
-    position: absolute;
+    position: absolute;  /* posiciona imagen sobre posicion relative */
     width: 12rem;
     height: 12rem;
     margin-top: 5rem;
@@ -66,9 +80,38 @@
 
  /* Fin de Header  */
 
+ .wrapper {
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+}
+
+.content-container{
+  position: relative;
+  width: 80rem;
+  height: 35rem;
+}
+
+
+.decoration{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 32rem;
+  background: linear-gradient(45deg, #00ffff, #0ff8, #00ffff);
+  z-index: 0; /* detrás */
+  transform: scale(1.02); /* agranda en todas las direcciones */
+  filter: blur(4px); /* brillo suave */
+}
+
  /* Sobre mi */
- .sobre-mi{
-    background-color: #151515;
+ .sobre-mi,
+ .habilidades,
+ .educacion{
+    position: relative; 
+    background-color: var(--color-contenedores);
     padding-bottom: 7rem;
     text-align: center;
     color: #fff;
@@ -77,8 +120,10 @@
     height: 30rem;
     margin-top: 1rem;
     padding-top: 1rem;
-
+    width: 80rem;
+     z-index: 1; /* por encima */
 }
+
 
 .bordered-title{
     font-size: 2rem;
@@ -86,7 +131,7 @@
     display: inline-block;
     color: #fff;
     text-shadow: -2px -2px 0 #3498db; 
-    
+
     /* 2px 2px 0 #3498db, = Sombra hacia la derecha */
     /*  -2px -2px 0 #3498db, = Sombra hacia la izquierda */
     /*  2px -2px 0 #3498db,  = Sombra hacia la parte superior */
@@ -110,6 +155,10 @@
 
 p{
     padding: 3rem 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    border: 0.2314rem solid white;
+  
 }
 
 
@@ -228,19 +277,27 @@ section asi que es heredados con los elementos que hay dentro de section */
   background-color: white;
   text-decoration: none;  
   color: #151515;
-
-
 }
 
+.btn:hover{
+  color: white;
+  background-color: #064254;
+}
 
 /* ancho de los campos */
  input{
-    max-width: 20rem;
-    height: 2rem;
+  max-width: 20rem;
+  height: 2rem;
  }
 
  textarea{
-    max-width: 20rem;
-    height: 10rem;
+  max-width: 20rem;
+  height: 10rem;
  }
 
+
+ /* inicio footer */
+ .social{
+  background-color: var(--color-contenedores);
+  height: 10rem;
+ }
